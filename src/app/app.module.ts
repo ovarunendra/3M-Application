@@ -17,7 +17,7 @@ import { AppState, InternalStateType } from './app.service';
 import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
-import { RestService } from  './Ckeditor/rest.service';
+//import { RestService } from  './Ckeditor/rest.service';
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
@@ -50,8 +50,7 @@ type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS,
-    RestService
+    APP_PROVIDERS
   ]
 })
 

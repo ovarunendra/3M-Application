@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Router } from '@angular/router';
 
+@Injectable()
 export class RestService {
 
   constructor(
@@ -9,7 +9,8 @@ export class RestService {
   
 
  checkCredentials() {
-   this.http.get('data/users.json')
+   return this.http.get('data/users.json')
+                    .map(response => response.json());
                 
  }
 

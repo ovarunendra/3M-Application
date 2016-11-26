@@ -7,7 +7,7 @@ import { NgaModule } from '../../theme/nga.module';
 import { routing }       from './editors.routing';
 import { Editors } from './editors.component';
 import { Ckeditor } from './components/ckeditor/ckeditor.component';
-import { RestService } from  './Ckeditor/rest.service';
+import { RestService } from  './rest.service';
 
 
 @NgModule({
@@ -22,8 +22,7 @@ import { RestService } from  './Ckeditor/rest.service';
     Editors,
     Ckeditor
   ],
-  providers: [ // expose our Services and Providers into Angular's dependency injection
-    
+  providers: [ // expose our Services and Providers into Angular's dependency injection  
     RestService
   ]
 })
